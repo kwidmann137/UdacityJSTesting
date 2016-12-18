@@ -59,7 +59,7 @@ $(function() {
          * the CSS to determine how we're performing the
          * hiding/showing of the menu element.
          */
-         it('menu is hidden', function(){
+         it('Is hidden as default', function(){
             var body = $('body');
             expect(body.hasClass("menu-hidden")).toBe(true);
          });
@@ -69,7 +69,7 @@ $(function() {
           * should have two expectations: does the menu display when
           * clicked and does it hide when clicked again.
           */
-          it('menu changes states', function(){
+          it('Changes states when clicked', function(){
             var body = $('body');
             var originalState = body.hasClass("menu-hidden");
             //trigger the click then test
@@ -98,7 +98,7 @@ $(function() {
             });
          });
 
-         it('Should have at least one entry', function(done){
+         it('has at least one entry', function(done){
             var container = $('.feed');
             var numEntries = container.find('.entry').length;
             expect(numEntries).toBeGreaterThan(0);
@@ -125,7 +125,7 @@ $(function() {
             });
          });
 
-         it('Should have changed content', function(done){
+         it('Changed content upon loading new feed', function(done){
             var newContent = $('.entry h2').map(function(){
                     return $(this).text();
                 }).get();
