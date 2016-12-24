@@ -134,7 +134,7 @@ $(function() {
             	lengthToCheck = initialContent.length;
             }
             for(var i = 0; i < lengthToCheck; i++){
-            	expect(initialContent).not.toBe(newContent);
+            	expect(initialContent[i]).not.toBe(newContent[i]);
             }
             done();
          });
